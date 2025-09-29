@@ -46,6 +46,18 @@
     aspect-ratio: 3;
 }
 
+@media (max-width: 1439px) and (min-width: 1161px) {
+    .about__img--wide {
+        aspect-ratio: 2;
+    }
+}
+
+@media (max-width: 1160px) {
+    .about__img--wide {
+        aspect-ratio: 3;
+    }
+}
+
 .about__images img:nth-child(2) {
     grid-area: left;
     aspect-ratio: 2;

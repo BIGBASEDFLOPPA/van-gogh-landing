@@ -1,8 +1,10 @@
-import html from './header.html?raw';
+import htmlRaw from './header.html?raw';
 import './header.css';
 
 export function renderHeader() {
+    const base = import.meta.env.BASE_URL;
     const wrapper = document.createElement('div');
+    const html = htmlRaw.replaceAll('/icons/', `${base}icons/`);
     wrapper.innerHTML = html.trim();
     const header = wrapper.firstElementChild;
 

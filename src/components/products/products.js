@@ -2,6 +2,7 @@ import html from './Products.html?raw';
 import './products.css';
 
 export function renderProducts(products = []) {
+    const base = import.meta.env.BASE_URL;
     const wrapper = document.createElement('div');
     wrapper.innerHTML = html.trim();
 
@@ -22,7 +23,7 @@ export function renderProducts(products = []) {
             <div class="product-card__desc-wrapper">
                 <p class="product-card__desc">${p.name}</p>
                 <span class="product-card__status ${p.statusClass}">
-                <img src="/icons/${p.statusClass === 'in-stock' ? 'iconGreenCheck' : 'iconOrangeCheck'}.svg" alt="" class="product-card__status-icon">
+              <img src="${base}icons/${p.statusClass === 'in-stock' ? 'iconGreenCheck' : 'iconOrangeCheck'}.svg" alt="" class="product-card__status-icon">
                      ${p.status}
                     </span>
                 <button class="btn card__btn">Подробнее</button>
