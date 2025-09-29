@@ -1,0 +1,14 @@
+:root {
+    --font-sans: 'Open Sans', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+
+    --weight-400: 400;
+    --weight-700: 700;
+
+    --size-14: 14px;
+    --size-16: 16px;
+    --size-18: 18px;
+    --size-20: 20px;
+    --size-30: 30px;
+    --size-36: 36px;
+}

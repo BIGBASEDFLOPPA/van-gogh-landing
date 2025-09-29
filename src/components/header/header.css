@@ -1,0 +1,118 @@
+.header {
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    @media (max-width: 1160px) {
+        padding-bottom: 50px;
+    }
+}
+
+.header__container {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 180px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.header__nav--desk {
+    display: flex;
+}
+
+.header__nav--mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.header__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    object-fit: contain;
+    @media (max-width: 576px) {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+.header__icon--close {
+    display: none;
+}
+
+@media (max-width: 1160px) {
+    .header__container {
+        padding: 10px 16px;
+        gap: 8px;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+    .header.open .header__container::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background: #EAEFF4;
+    }
+
+    .header__nav--desk {
+        display: none;
+    }
+
+    .header__toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .header__nav--mobile {
+        display: block;
+        max-height: 0;
+    }
+
+    .header.open .header__nav--mobile {
+        will-change: max-height;
+    }
+
+    .header.open .header__icon--burger {
+        display: none;
+    }
+
+    .header.open .header__icon--close {
+        display: block;
+    }
+
+    .header__nav--mobile .header__link {
+        padding: 20px 20px;
+        border-bottom: 1px solid #EAEFF4;
+        height: 64px;
+        width: calc(100% - 80px);
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+}
