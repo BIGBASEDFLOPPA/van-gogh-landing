@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const n of e)if(n.type==="childList")for(const a of n.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&t(a)}).observe(document,{childList:!0,subtree:!0});function c(e){const n={};return e.integrity&&(n.integrity=e.integrity),e.referrerPolicy&&(n.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?n.credentials="include":e.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function t(e){if(e.ep)return;e.ep=!0;const n=c(e);fetch(e.href,n)}})();const o=`<header class="header">\r
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const n of e)if(n.type==="childList")for(const a of n.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&t(a)}).observe(document,{childList:!0,subtree:!0});function c(e){const n={};return e.integrity&&(n.integrity=e.integrity),e.referrerPolicy&&(n.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?n.credentials="include":e.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function t(e){if(e.ep)return;e.ep=!0;const n=c(e);fetch(e.href,n)}})();const l=`<header class="header">\r
     <div class="container">\r
         <div class="header__container">\r
             <img src="/icons/iconLogo.svg" alt="Лого" class="header__logo">\r
@@ -23,14 +23,14 @@
         </nav>\r
     </div>\r
 </header>\r
-`;function l(){const r=document.createElement("div");r.innerHTML=o.trim();const s=r.firstElementChild,c=s.querySelector(".header__toggle"),t=s.querySelector(".header__nav--mobile");s.querySelectorAll(".header__nav--mobile .header__link");function e(){s.classList.add("open"),getComputedStyle(t).display!=="none"&&(t.style.maxHeight=t.scrollHeight+"px")}function n(){s.classList.remove("open"),t.style.maxHeight="0px"}return c.addEventListener("click",()=>{s.classList.contains("open")?n():e()}),window.addEventListener("resize",()=>{window.innerWidth>1160?(s.classList.remove("open"),t.style.maxHeight=null):s.classList.contains("open")&&(t.style.maxHeight=t.scrollHeight+"px")}),s}const d=`<section class="products section">\r
+`;function d(){const r=document.createElement("div");r.innerHTML=l.trim();const s=r.firstElementChild,c=s.querySelector(".header__toggle"),t=s.querySelector(".header__nav--mobile");s.querySelectorAll(".header__nav--mobile .header__link");function e(){s.classList.add("open"),getComputedStyle(t).display!=="none"&&(t.style.maxHeight=t.scrollHeight+"px")}function n(){s.classList.remove("open"),t.style.maxHeight="0px"}return c.addEventListener("click",()=>{s.classList.contains("open")?n():e()}),window.addEventListener("resize",()=>{window.innerWidth>1160?(s.classList.remove("open"),t.style.maxHeight=null):s.classList.contains("open")&&(t.style.maxHeight=t.scrollHeight+"px")}),s}const u=`<section class="products section">\r
     <div class="container products__container">\r
         <h2 class="products__title">РЕКОМЕНДУЕМОЕ ОБОРУДОВАНИЕ</h2>\r
         <div class="products__grid"></div>\r
         <button class="btn catalog__btn">Перейти в каталог</button>\r
     </div>\r
 </section>\r
-`;function u(r=[]){const s=document.createElement("div");s.innerHTML=d.trim();const c=s.firstChild,t=c.querySelector(".products__grid");return r.forEach((e,n)=>{const a=document.createElement("div");a.className="product-card",(n===2||n===4)&&a.classList.add("product-card--mobile-hidden"),a.innerHTML=`
+`;function _(r=[]){const s=document.createElement("div");s.innerHTML=u.trim();const c=s.firstChild,t=c.querySelector(".products__grid");return r.forEach((e,n)=>{const a=document.createElement("div");a.className="product-card",(n===2||n===4)&&a.classList.add("product-card--mobile-hidden"),a.innerHTML=`
             <img src="${e.img}" alt="${e.name}" class="product-card__img">
             <div class="product-card__desc-wrapper">
                 <p class="product-card__desc">${e.name}</p>
@@ -40,7 +40,7 @@
                     </span>
                 <button class="btn card__btn">Подробнее</button>
             </div>
-        `,t.appendChild(a)}),c}const _=`<section class="about section">\r
+        `,t.appendChild(a)}),c}const m=`<section class="about section">\r
     <div class="container">\r
         <h2 class="about__title">О КОМПАНИИ</h2>\r
         <div class="about__container">\r
@@ -80,4 +80,4 @@
         </div>\r
     </div>\r
 </section>\r
-`;function m(){const r=document.createElement("section");return r.className="about section",r.innerHTML=_.trim(),r}const i=document.getElementById("app"),p=[{img:"/images/products1.webp",name:"Стальной канат для лифта GRS 9X21F(9Х17)-IWRC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:"/images/products2.webp",name:"Плоский тяговый ремень для лифта GRS AAA717X1 (12 кордов)",status:"Под заказ",statusClass:"out-of-stock"},{img:"/images/products3.webp",name:"Стальной канат для лифта GRS 8X19S-NFC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:"/images/products4.webp",name:"Стальной канат для лифта GRS 9X21F(9Х17)-IWRC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:"/images/products5.webp",name:"Стальной канат для лифта GRS 8X19W-CWC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:"/images/products6.webp",name:"Купить плоский тяговый ремень для лифта GRS AAA717AJ1(8 кордов)",status:"В наличии 50 м.",statusClass:"in-stock"}];i.appendChild(l());i.appendChild(u(p));i.appendChild(m());
+`;function g(){const r=document.createElement("section");return r.className="about section",r.innerHTML=m.trim(),r}const o=document.getElementById("app"),i="/van-gogh-landing/",p=[{img:`${i}images/products1.webp`,name:"Стальной канат для лифта GRS 9X21F(9Х17)-IWRC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:`${i}images/products2.webp`,name:"Плоский тяговый ремень для лифта GRS AAA717X1 (12 кордов)",status:"Под заказ",statusClass:"out-of-stock"},{img:`${i}images/products3.webp`,name:"Стальной канат для лифта GRS 8X19S-NFC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:`${i}images/products4.webp`,name:"Стальной канат для лифта GRS 9X21F(9Х17)-IWRC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:`${i}images/products5.webp`,name:"Стальной канат для лифта GRS 8X19W-CWC 1570",status:"В наличии 50 м.",statusClass:"in-stock"},{img:`${i}images/products6.webp`,name:"Купить плоский тяговый ремень для лифта GRS AAA717AJ1(8 кордов)",status:"В наличии 50 м.",statusClass:"in-stock"}];o.appendChild(d());o.appendChild(_(p));o.appendChild(g());
